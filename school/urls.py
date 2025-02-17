@@ -20,8 +20,8 @@ from teachers import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home),
-    path('all-data/',views.data),
+    path('', views.home),
+    path('all/',views.data),
     path('update/<int:id>/', views.update, name='update'),
     path('delete/<int:id>/', views.delete, name='delete'),
     path('boottest/', views.boottest),
