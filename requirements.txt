@@ -1,0 +1,5 @@
+asgiref==3.8.1
+Django==5.0.6
+gunicorn==22.0.0
+dj-database-url==2.1.0
+sklearn==1.6.1
