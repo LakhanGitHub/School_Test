@@ -70,8 +70,8 @@ def predict(request):
         query = query.reshape(1,12)
         
         prediction ="The predicted price of this configuration is: Rs " + str(np.round(np.exp(pipe.predict(query)[0]),0))
-        return render(request, 'priceprediction/home.html', {'form':form,'result':prediction})
+        return render(request, 'teachers/home.html', {'form':form,'result':prediction})
 
     else:
         form = PredictionForm()
-    return render(request, 'priceprediction/home.html', {'form':form})
+    return render(request, 'teachers/home.html', {'form':form})
