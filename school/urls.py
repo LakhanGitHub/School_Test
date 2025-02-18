@@ -1,5 +1,5 @@
 """
-URL configuration for school project.
+URL configuration for ComputerPrice project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,14 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from teachers import views
+from django.urls import path, include
+from PricePrediction import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
-    path('all/',views.data),
-    path('update/<int:id>/', views.update, name='update'),
-    path('delete/<int:id>/', views.delete, name='delete'),
-    path('boottest/', views.boottest),
+    path('', include('PricePrediction.urls'))
 ]
